@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <style>
+      /* Estilos para o tamanho da fonte dos símbolos matemáticos */
+      .mjx-math * {
+        font-size: 1.6rem;
+        font-weight: 100;
+        color: #2d2d2d;
+        /* Altrgb(58, 58, 58)a o tamanho desejado */
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="author" content="Serafim Adão Gonga" />
+    <meta name="email" content="serafimag@gmail.com" />
+    <meta
+      name="description"
+      content="Calculadora que permite calcular a equação do 2º Grau"
+    />
+
+    <title>Equação do 2º grau</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <main>
+      <div  class="modal">
+        <div class="modal-content">
+          <!--<img class="" role="alerta" src="./img/info.PNG">-->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            consequuntur ab quae excepturi labore dolor eveniet pariatur nostrum
+            cumque ipsam corporis provident doloribus fugiat culpa, officia est
+            cupiditate, laudantium quidem.
+          </p>
+          <div class="close flex"><span>x</span></div>
+        </div>
+      </div>
+
+      <form>
+        <section class="container">
+          <section class="container groups padding-14px gap flex">
+            <div class="calcular gap padding-14px">
+              <h1 id="">Calculadora para equação quadrática.</h1>
+              <h2 style="text-align: left;">
+                Esta calculadora permite calcular as raizes de uma equação quadrática.
+              </h2>
+
+              <div>
+                <h2 id="mostrar">Equação quadrática?</h2>
+
+                <p id="ocultar">
+                  Uma equação quadrática é toda expressão matemática escrita
+                  dessa forma \(ax^2 + bx + c = 0\) ; onde a, b, c, são os
+                  coeficientes e \(a \neq 0\).
+                </p>
+              </div>
+
+              <div class="expressao-parent flex">
+                <div class="expressao-child mjx-math padding-14px" id="mjx">
+                  <!-- \(ax^2 + bx + c = 0\)-->
+                </div>
+              </div>
+
+              <div class="group">
+
+                <p  id="erro">O valor de a não pode ser nulo.</p>
+                <div class="group-container">
+                  <div class="relativo">
+                    <input class="" id="valor_a" type="number" placeholder="" />
+                    <div class="absoluto"><span>a</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="group">
+               
+                <div class="group-container">
+                  <div class="relativo">
+                    <input class="" id="valor_b" type="number" placeholder="" />
+                    <div class="absoluto"><span>b</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="group">
+                
+                <div class="group-container">
+                  <div class="relativo">
+                    <input class="" id="valor_c" type="number" placeholder="" />
+                    <div class="absoluto"><span>c</span></div>
+                  </div>
+                </div>
+              </div>
+              <input id="btnCalcular" type="button" value="Calcular" />
+            </div>
+
+            <div class="resultado gap padding-14px">
+              <h1>Resultado</h1>
+              <div class="group">
+           
+                <div class="group-container">
+                  <div class="relativo">
+                    <input
+                      type="number"
+                      readonly
+                      id="valor_x1"
+                      type="text"
+                      placeholder=""
+                    />
+                    <div class="absoluto">
+                      <span class="mjx-math">\(x'=\)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="group">
+                <div class="group-container">
+                  <div class="relativo">
+                    <input
+                      type="number"
+                      readonly
+                      id="valor_x2"
+                      type="text"
+                      placeholder=""
+                    />
+                    <div class="absoluto">
+                      <span class="mjx-math">\(x''=\)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input id="btn_limpar" onclick="Limpar()" type="button" value="Limpar" />
+            </div>
+          </section>
+        </section>
+      </form>
+    </main>
+    <script type="text/javascript">
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script type="" src="./js/js.js"></script>
+
+    
+    
+  </body>
+</html>
